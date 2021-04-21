@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "declaration": true,
+    "stripInternal": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "noImplicitAny": true,
+    "module": "es2015",
+    "moduleResolution": "node",
+    "paths": {
+      "@ionic-native/core": ["./dist/@ionic-native/core"]
+    },
+    "outDir": "./dist",
+    "rootDir": "src",
+    "target": "es5",
+    "skipLibCheck": true,
+    "lib": ["es2017", "dom"],
+    "inlineSources": true,
+    "inlineSourceMap": true
+  },
+  "include": [
+    "src/ionic/plugins/ionic-native-navigation-bar-color/index.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "src/ionic/plugins/ionic-native-navigation-bar-color/*.spec.ts"
+  ],
+  "angularCompilerOptions": {
+    "genDir": "aot"
+  },
+  "plugins": [{ "name": "typescript-tslint-plugin" }]
+}

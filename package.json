@@ -1,0 +1,124 @@
+{
+  "name": "ionic-navigationbar-color",
+  "version": "5.28.2",
+  "description": "Native plugin wrapper for Cordova Navigation Bar Color with TypeScript, ES6+ and Promise support",
+  "homepage": "https://github.com/squareetlabs/ionic-navigationbar-color/",
+  "author": {
+    "name": "Jacobo Cantorna Cigarrán",
+    "email": "jacobo@squareet.com",
+    "url": "https://squareet.com"
+  },
+  "contributors": [
+    {
+      "name": "Alberto Rial Barreiro",
+      "email": "alberto@squareet.com",
+      "url": "https://squareet.com"
+    }
+  ],
+  "license": "MIT",
+  "scripts": {
+    "pretest": "npm run prebuild; npm run build:esm",
+    "test": "jest && npm run lint",
+    "test:watch": "jest --watch",
+    "build:core": "tsc -p tsconfig.core.json",
+    "build:esm": "ts-node -P scripts/tsconfig.json scripts/tasks/build-esm",
+    "build:es5": "ts-node -P scripts/tsconfig.json scripts/tasks/build-es5",
+    "build:ngx": "ts-node -P scripts/tsconfig.json scripts/tasks/build-ngx",
+    "build": "npm run build:esm && npm run build:ngx && npm run build:es5",
+    "prebuild": "rimraf -rf dist",
+    "npmpub": "ts-node -P scripts/tsconfig.json scripts/tasks/publish",
+    "lint": "gulp lint",
+    "readmes": "gulp readmes",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+    "postchangelog": "git commit -am \"chore(): update changelog\"",
+    "shipit": "npm run dev && cp README.md  dist/ionic-navigationbar-color && npm login && npm run npmpub && npm logout",
+    "dev": "npm run test && npm run build && cp package.json dist/ionic-navigationbar-color"
+  },
+  "devDependencies": {
+    "@angular/common": "^9.1.12",
+    "@angular/compiler": "^9.1.12",
+    "@angular/compiler-cli": "^9.1.12",
+    "@angular/core": "^9.1.12",
+    "@types/cordova": "0.0.34",
+    "@types/fs-extra": "^9.0.1",
+    "@types/jest": "^26.0.9",
+    "@types/lodash": "^4.14.159",
+    "@types/node": "^12.12.54",
+    "@types/rimraf": "^3.0.0",
+    "@types/webpack": "^4.41.21",
+    "ajv": "^6.12.3",
+    "async-promise-queue": "^1.0.5",
+    "conventional-changelog-cli": "^2.1.0",
+    "cz-conventional-changelog": "^3.2.0",
+    "dgeni": "^0.4.12",
+    "dgeni-packages": "0.16.10",
+    "fs-extra": "^9.0.1",
+    "gulp": "^4.0.2",
+    "gulp-rename": "^2.0.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-tslint": "^8.1.4",
+    "husky": "^4.2.5",
+    "jest": "^26.4.0",
+    "lint-staged": "^10.2.11",
+    "lodash": "^4.17.20",
+    "minimist": "^1.2.5",
+    "natives": "^1.1.6",
+    "prettier": "^2.0.5",
+    "rimraf": "^3.0.2",
+    "rxjs": "^6.6.2",
+    "ts-jest": "^26.2.0",
+    "ts-node": "^8.10.2",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-ionic-rules": "0.0.21",
+    "typedoc": "^0.18.0",
+    "typescript": "~3.8.3",
+    "typescript-tslint-plugin": "0.5.5",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "unminified-webpack-plugin": "^2.0.0",
+    "webpack": "^4.44.1",
+    "winston": "^3.3.3",
+    "zone.js": "^0.10.3"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(js?|ts?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src": [
+      "prettier --write"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/squareetlabs/ionic-navigationbar-color.git"
+  },
+  "bugs": {
+    "url": "https://github.com/squareetlabs/ionic-navigationbar-color/issues"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "dependencies": {
+    "@ionic-native/core": "^5.27.0",
+    "@angular/core": "^9.1.12",
+    "cordova-plugin-navigationbar-color": "^0.1.0",
+    "tslib": "^1.13.0"
+  }
+}
