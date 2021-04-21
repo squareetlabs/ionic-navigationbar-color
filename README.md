@@ -9,29 +9,29 @@ Ionic NavigationBar Color is an Ionic 5 Native Wrapper that allows you to change
 
 ## How to use
 
-##For global config using "ionic-navigationbar-color" you can just add preference to config.xml file.
+## For global config using "ionic-navigationbar-color" you can just add preference to config.xml file.
 
-####NavigationBarBackgroundColor change the color of navigation bar.
+#### NavigationBarBackgroundColor change the color of navigation bar.
 ```<preference name="NavigationBarBackgroundColor" value="#000000" />```
 
-####NavigationBarLight change the color of the buttons in the navigation bar to black, use in light colors of the navigation bar (Android 8.0 or higher).
+#### NavigationBarLight change the color of the buttons in the navigation bar to black, use in light colors of the navigation bar (Android 8.0 or higher).
 ```<preference name="NavigationBarLight" value="true" />```
 
-##For particular config using import
+## For particular config using import
 You can also use it by importing it in the app.module.ts or in the module corresponding to the page where it is going to be used in case of using lazyLoad for loading
 
 ```import { NavigationBarColor } from 'ionic-plugin-navigation-bar-color';```
 
 ```constructor(...,`public navigationBarColor: NavigationBarColor,...) { }```
 
-###Now you can change background color using this:
+### Now you can change background color using this:
 
 ```navigationBarColor.backgroundColorByHexString('#000000', false);```
 
-###To hide the navigation bar use this:
+### To hide the navigation bar use this:
 ```navigationBarColor.hide()```
 
-###To force show the navigation bar use this:
+### To force show the navigation bar use this:
 ```navigationBarColor.show()```
 
 ------------------------

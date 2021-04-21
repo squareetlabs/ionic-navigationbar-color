@@ -20,11 +20,11 @@
     "inlineSourceMap": true
   },
   "include": [
-    "src/ionic/plugins/ionic-native-navigation-bar-color/index.ts"
+    "src/ionic/plugins/ionic-navigationbar-color/index.ts"
   ],
   "exclude": [
     "node_modules",
-    "src/ionic/plugins/ionic-native-navigation-bar-color/*.spec.ts"
+    "src/ionic/plugins/ionic-navigationbar-color/*.spec.ts"
   ],
   "angularCompilerOptions": {
     "genDir": "aot"

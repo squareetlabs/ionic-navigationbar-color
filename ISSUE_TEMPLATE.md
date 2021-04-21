@@ -21,7 +21,7 @@ However screen captures or screen records are posted in public issue thread.
 insert the output from the command here
 ```
 
-**If you use `ionic-native-navigation-bar-color`, please tell the package.json (only `@ionic-native/core` and `ionic-native-navigation-bar-color` are fine mostly)**
+**If you use `ionic-navigationbar-color`, please tell the package.json (only `@ionic-native/core` and `ionic-native-navigation-bar-color` are fine mostly)**
 
 **Current behavior:**
 <!-- Describe how the bug manifests. -->

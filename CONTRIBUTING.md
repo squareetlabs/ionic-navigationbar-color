@@ -32,7 +32,7 @@ $> cd (your ionic project)
 
 $> npm install (path to ionic-native-google-maps)/dist/\@ionic-native/core --link
 
-$> npm install (path to ionic-native-google-maps)/dist/\ionic-native-navigation-bar-color --link
+$> npm install (path to ionic-native-google-maps)/dist/\ionic-navigationbar-color --link
 
 $> ionic cordova run android
 ```

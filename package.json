@@ -1,6 +1,6 @@
 {
   "name": "ionic-navigationbar-color",
-  "version": "5.28.2",
+  "version": "1.0.24",
   "description": "Native plugin wrapper for Cordova Navigation Bar Color with TypeScript, ES6+ and Promise support",
   "homepage": "https://github.com/squareetlabs/ionic-navigationbar-color/",
   "author": {
@@ -31,8 +31,9 @@
     "readmes": "gulp readmes",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "postchangelog": "git commit -am \"chore(): update changelog\"",
-    "shipit": "npm run dev && cp README.md  dist/ionic-navigationbar-color && npm login && npm run npmpub && npm logout",
-    "dev": "npm run test && npm run build && cp package.json dist/ionic-navigationbar-color"
+    "shipit": "npm run dev && cp README.md  dist/ionic/plugins/ionic-navigationbar-color && npm login && npm run npmpub && npm logout",
+    "dev": "npm run build && cp package.json dist/ionic/plugins/ionic-navigationbar-color && cp README.md dist/ionic/plugins/ionic-navigationbar-color && cp LICENSE dist/ionic/plugins/ionic-navigationbar-color",
+    "pub": "npm login && npm publish && npm logout"
   },
   "devDependencies": {
     "@angular/common": "^9.1.12",
@@ -45,6 +46,7 @@
     "@types/lodash": "^4.14.159",
     "@types/node": "^12.12.54",
     "@types/rimraf": "^3.0.0",
+    "@ionic-native/core": "^5.27.0",
     "@types/webpack": "^4.41.21",
     "ajv": "^6.12.3",
     "async-promise-queue": "^1.0.5",
@@ -116,8 +118,6 @@
     }
   },
   "dependencies": {
-    "@ionic-native/core": "^5.27.0",
-    "@angular/core": "^9.1.12",
     "cordova-plugin-navigationbar-color": "^0.1.0",
     "tslib": "^1.13.0"
   }
