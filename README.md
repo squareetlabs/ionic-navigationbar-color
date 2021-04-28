@@ -42,19 +42,20 @@ If you can't solve your problem, please report to [ionic-navigationbar-color](ht
 
 ## Build
 
-Run `npm run build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run `ng build ionic-rating` to build the project. The build artifacts will be stored in the `dist/` directory.
 
 ## Publishing
 
-After building your library with `npm run shipit`, go to the dist folder `cd dist/ionic-navigationbar-color` and run `npm publish`.
+After building your library with `ng build ionic-rating`, go to the dist folder `cd dist/ionic-rating` and run `npm publish`.
 
 ## Running unit tests
 
-Run `npm run test` to execute the unit tests.
+Run `ng test ionic-rating` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
 
 ## Credits
 - [Alberto Rial Barreiro](https://github.com/alberto-rial)
